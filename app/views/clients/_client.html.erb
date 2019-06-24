@@ -1,0 +1,5 @@
+<tr id="client_<%= client.id %>">
+  <td><h4 class="name"><%= client.name %></h4></td>
+  <td><%= link_to 'Edit', edit_client_path(client), remote: true %></td>
+  <td><%= link_to 'Delete', client, method: :delete, data: { confirm: "Está certo que quer deletar #{client.name}?" }, remote: true %></td>
+</tr>

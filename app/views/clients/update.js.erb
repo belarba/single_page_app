@@ -1,0 +1,6 @@
+// Find the existing critter <tr> by id, then replace it
+// with the newly-populated partial (which is also a <tr>).
+document.querySelector("#client_<%= @client.id %>").outerHTML = "<%= escape_javascript(render partial: 'client', locals: {client: @client} ) %>"
+
+// Remove the "edit" form from the table
+document.querySelector("#edit-form-<%= @client.id %>").remove()

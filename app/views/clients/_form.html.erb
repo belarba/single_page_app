@@ -1,0 +1,24 @@
+<%= simple_form_for(client, remote: true) do |form| %>
+  <% if @client.errors.any? %>
+     <div class="errors-container">
+       <ul>
+         <% @client.errors.full_messages.each do |message| %>
+           <li><%= message %></li>
+         <% end %>
+       </ul>
+     </div>
+   <% end %>
+  <%= form.input :name %>
+  <%= form.input :cpf %>
+  <%= form.input :data_nascimento %>
+  <%= form.input :telefone %>
+  <%= form.input :email %>
+  <%= form.input :logradouro %>
+  <%= form.input :cep %>
+  <%= form.input :bairro %>
+  <%= form.input :complemento %>
+  <%= form.input :cidade %>
+  <%= form.input :estado %>
+
+  <%= form.button :submit, class: "btn btn-primary" %>
+<% end %>

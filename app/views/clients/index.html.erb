@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Clients</h1>
+
+  <div><%= link_to '+ New Client', new_client_path, remote: true , class: "mb-3 btn btn-primary"%></div>
+
+  <div id="new-form-placeholder"></div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+
+    <tbody id="clients" >
+      <% @clients.each do |client| %>
+        <%= render 'client', client: client %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
